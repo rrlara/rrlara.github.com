@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ## Spatial Dev on FSP
@@ -15,11 +15,3 @@ Mobile Coverage: Collins Bartholomew and GSMA, (HarperCollins Publisher, Dec 201
 **Population:** Tatem AJ. Afripop Data 2012. Gainesville, United States: Emerging Pathogens Institute, University of Florida. Afripop Website
 
 **Urban Areas:** Global Rural-Urban Mapping Project (GRUMP), Center for International Earth Science Information Network (CIESIN), Centro Internacional de Agricultura Tropical (CIAT), 2005. Palisades, NY: CIESIN, Columbia University. GRUMP Website
-
-
-
-
-
-
-
-
