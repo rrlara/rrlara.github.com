@@ -2,7 +2,7 @@
 published: true
 ---
 
-{% include JB/setup %}
+
 
 Posting using Pros.io
 
