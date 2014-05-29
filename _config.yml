@@ -1,10 +1,10 @@
-baseurl: /news-spatialdev
+baseurl: /rrlara.github.com
 permalink: pretty
 markdown: rdiscount
 prose:
   rooturl: '_posts'
-  siteurl: 'http://spatialdev.github.io/news-spatialdev/'
-  relativeLinks: 'http://spatialdev.github.io/news-spatialdev/links.jsonp'
+  siteurl: 'http://rrlara.github.io/rrlara.github.com/'
+  relativeLinks: 'http://rrlara.github.io/rrlara.github.com/links.jsonp'
   media: 'media'
   metadata:
     _posts:
