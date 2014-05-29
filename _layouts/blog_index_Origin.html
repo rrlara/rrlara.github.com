@@ -1,0 +1,138 @@
+---
+title: ''
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>SpatialDev News</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{site.baseurl}}/bootstrap.css" rel="stylesheet">
+
+    <link href="{{site.baseurl}}/fontstyles.css" rel="stylesheet">
+
+<!--     <link href='{{site.baseurl}}/site.css' rel='stylesheet' /> -->
+
+    <!-- Custom styles for this template -->
+    <link href="{{site.baseurl}}/blog.css" rel="stylesheet">
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="col-sm-12 clearfix logoWrapper">
+      <div class="logoHeader container clearfix">
+        <a href="{{site.baseurl}}/"> <img class="logo" src="{{site.baseurl}}/img/SDLogo150.png" alt=""></a>
+        
+      </div>
+    </div>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+
+
+      <div class="row">
+
+        <div class="col-sm-9 blog-main">
+        <div class="blog-header">
+          <h3 class="blog-title">Latest News</h3>
+        </div>
+
+          {{content}}
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 blog-sidebar" style="margin-top:40px;">
+          <div class="sidebar-module sidebar-module-inset">
+
+          </div>
+          <div class="sidebar-module">
+
+            <a class='{% if page.url == "about/" %}active{% endif %}' href='{{site.baseurl}}/about'><i class="fa fa-info-circle"></i></a>
+            <a class="twitterLink" href='https://twitter.com/SpatialDev'><i class="fa fa-twitter"></i></a>
+            <a href='https://www.facebook.com/pages/Spatial-Development-International-SpatialDev/207761724057?ref=br_tf'><i class="fa fa-facebook"></i></a>
+            <a href='http://demo.spatialdev.com/spatialdev.github.io/'><i class="fa fa-github"></i></a>
+            {% include rss-link.html %}
+          </div>
+          <div class="chosen-container chosen-container-multi" style="width: 300px;" title="" id="repolist_chosen"><input type="text" value="" class="default" autocomplete="off" tabindex="5"><i id="searchGlass" class="fa fa-search"></i></div>
+          <div class="sidebar-module">
+            <h4>Archives <i class="fa fa-calendar"></i></h4>
+                {% for post in site.posts %}
+                    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+                    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+
+                        {% if month != nmonth %}
+                            {% if forloop.index != 1 %}</ul>{% endif %}
+                            <a href="{{site.baseurl}}/{{ post.date | date: '%Y/%m' }}"><div id="{{ post.date | date: '%Y/%m' }}" class="month">{{ post.date | date: '%B %Y' }}</div></a><ul id="{{ post.date | date: '%B %Y' }}" class="monthStack">
+                            {% endif %}
+                        <div ><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></div><span>{{ post.date | date: "%e %B %Y" }}</span>
+
+                    {% endfor %}
+                  </div>
+          <div class="sidebar-module">
+            <h4>Tags <i class="fa fa-tags"></i></h4>
+            <span class="list-unstyled">
+
+                  {% for tag in site.tags %}
+                      <span><a href="{{site.baseurl}}/tags/{{ tag[0] }}">{{ tag[0] }}</a>, </span>
+                  {% endfor %}
+
+            </span>
+          </div>
+          </div>
+
+
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+
+
+    <div class="col-sm-12 clearfix logoWrapper">
+      <div class="logoHeader container clearfix">
+        <a href="#">Back to top</a>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+
+    $(".month").on("click", function () {
+
+      // $( this ).toggleClass( "active" );
+
+  });
+
+  </script>
+
+  </body>
+</html>

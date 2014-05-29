@@ -1,5 +1,10 @@
 ---
 layout: default
 ---
-{% include JB/setup %}
-{% include themes/twitter/page.html %}
+
+<div class='listing col9 margin15 pad4h'>
+  <h3>{{page.title}}</h3>
+  <div class='prose'>
+    {{content}}
+  </div>
+</div>
