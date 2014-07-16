@@ -1,121 +1,73 @@
-baseurl: /rrlara.github.com
-permalink: pretty
-markdown: rdiscount
-prose:
-  rooturl: '_posts'
-  siteurl: 'http://rrlara.github.io/rrlara.github.com/'
-  relativeLinks: 'http://rrlara.github.io/rrlara.github.com/links.jsonp'
-  media: 'media'
-  metadata:
-    _posts:
-      - name: "published"
-        field:
-          label: "Published"
-          element: "checkbox"
-          value: "true"
-      - name: "members"
-        field:
-          element: "select"
-          label: "Post By:"
-          alterable: "true"
-          placeholder: "Choose Member"
-          options:
-            - name: "Todd Slind"
-              value: "Todd Slind"
-            - name: "Jubal Harpster"
-              value: "Jubal Harpster"
-            - name: "Clint Cabanero"
-              value: "Clint Cabanero"
-            - name: "Nick Hallahan"
-              value: "Nick Hallahan"
-            - name: "Mike Leech"
-              value: "Mike Leech"
-            - name: "Ryan Whitley"
-              value: "Ryan Whitley"
-            - name: "Rene Rodriguez"
-              value: "Rene Rodriguez"
-            - name: "Grant Mckenzie"
-              value: "Grant Mckenzie"
-            - name: "Daniel Duarte"
-              value: "Daniel Duarte"
-            - name: "Eric Kramak"
-              value: "Eric Kramak"
-            - name: "Naomi Menahem"
-              value: "Naomi Menahem"
-            - name: "Rich Gwozdz"
-              value: "Rich Gwozdz"
-            - name: "Shawna Paradee"
-              value: "Shawna Paradee"
-            - name: "Phoebe Merritt"
-              value: "Phoebe Merritt"
-            - name: "Adam Roberts"
-              value: "Adam Roberts"
-            - name: "Heidi Johnson"
-              value: "Heidi Johnson"
-            - name: "SpatialDev"
-              value: "SpatialDev"
-      - name: "category"
-        field:
-          element: "hidden"
-          value: "blog"
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "blog"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          value: ""
-      - name: "splash"
-        field:
-          element: "text"
-          label: "Splash image URL"
-          value: ""
-      - name: "youtube_url"
-        field:
-          element: "text"
-          label: "Youtube Video ID"
-          value: ""
-          placeholder: "1234456789"
-      - name: "vimeo_url"
-        field:
-          element: "text"
-          label: "Vimeo Video ID"
-          value: ""
-          placeholder: "12345678"
-      - name: "tags"
-        field:
-          element: "multiselect"
-          label: "Add Tags"
-          alterable: "true"
-          placeholder: "Choose Tags"
-          options:
-            - name: "Work"
-              value: "work"
-            - name: "Services"
-              value: "services"
-            - name: "About Us"
-              value: "about us"
-            - name: "Careers"
-              value: "careers"
-      - name: "summary"
-        field:
-          element: "text"
-          label: "Summary"
-          value: ""
-    _posts/static:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "page"
-      - name: "title"
-        field:
-          element: "text"
-          label: "Title"
-          value: ""
-      - name: "permalink"
-        field:
-          element: "text"
-          label: "Permalink"
-          value: ""
+title:            News
+description:      Describe your website.
+# Your site's domain goes here. Leave localhost server or blank when working locally.
+url:              http://localhost:4000
+disqus_shortname:
+
+# Owner/author information
+owner:
+  name:           Rene Rodriguez
+  avatar:         profileImage.jpg
+  bio:            "Geospatial Developer"
+  email:          rrlara@gmail.com
+  # Social networking links are used in author-bio sidebar. Update and remove as you like.
+  twitter: rrlara
+  facebook:
+  github: rrlara
+  stackoverflow:
+  linkedin:
+  instagram:
+  lastfm:
+  tumblr:
+  pinterest:
+  foursquare:
+  steam:
+  dribbble:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: About
+    url: /about/
+  - title: Posts
+    url: /posts/
+  # - title: Theme Setup
+  #   url: /theme-setup/
+  # - title: Made Mistakes
+  #   url: http://mademistakes.com
+  #   external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+pygments:    true
+#highlighter: pygments
+markdown:    rdiscount
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers:
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
